@@ -56,7 +56,10 @@ window.makeSchedule = function(){
 				var badDays = classInfo.children[2].innerHTML;
 				location = classInfo.children[3].innerHTML;
 				var dateRangeBad = classInfo.children[4].innerHTML;
-				course = courseNum + " " + classInfo.children[5].innerHTML;
+				
+				//Remove extra spaces and HTML tag from the course number
+				courseNum = (courseNum.replace(/\s+/g, ' ')).replace(/(<\/a>)/g, '');
+				course = courseNum + " " + classInfo.children[5];
 				//description = description +" with " + classInfo.children[6].innerHTML.split(" (")[0];
 
 				//console.log(description);
@@ -112,7 +115,7 @@ window.makeSchedule = function(){
 				
 				byDayStr = badDays.slice(0,-1);
 
-				// take wpi course data and build an ICS object 
+				// take course data and build an ICS object 
 				var rrule = {
 					freq: "WEEKLY",
 					until: endDay,
