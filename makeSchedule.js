@@ -57,10 +57,9 @@ window.makeSchedule = function(){
 				location = classInfo.children[3].innerHTML;
 				var dateRangeBad = classInfo.children[4].innerHTML;
 				
-				var section = classInfo.children[5];
-				//Remove the </a> from the section letter
-				section = section.match(/([A-Z])+/,section)[0];
-				course = courseNum + " " + section;
+				//Remove extra spaces and HTML tag from the course number
+				courseNum = (courseNum.replace(/\s+/g, ' ')).replace(/(<\/a>)/g, '');
+				course = courseNum + " " + classInfo.children[5];
 				//description = description +" with " + classInfo.children[6].innerHTML.split(" (")[0];
 
 				//console.log(description);
