@@ -1,5 +1,5 @@
-//File by Paul Roberts
-//Based off of code by Evin Ugur
+//File by Cade Doebele
+//Based off of code by Evin Ugur and Paul Roberts
 
 window.makeSchedule = function(){
 	
@@ -60,8 +60,17 @@ window.makeSchedule = function(){
 				//Remove extra spaces and HTML tag from the course number
 				courseNum = (courseNum.replace(/\s+/g, ' ')).replace(/(<\/a>)/g, '');
 				course = courseNum + " " + classInfo.children[5].innerHTML;
-				//description = description +" with " + classInfo.children[6].innerHTML.split(" (")[0];
 
+				var professor = classInfo.children[6].innerHTML.split(" (")[0];
+				var tba = "To Be Announced";
+
+				if (professor.substring(13, 28) === tba) {
+					professor = tba;
+					description += "Professor: " + tba;
+				} else {
+					professor = professor.replace(/\s+/g, ' ');
+					description += "with Professor " + professor;
+				}
 				//console.log(description);
 
 				var dates = dateRangeBad.split(" - ");
@@ -133,5 +142,3 @@ window.makeSchedule = function(){
 }
 
 window.makeSchedule();
-
-
