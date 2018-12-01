@@ -59,7 +59,7 @@ window.makeSchedule = function(){
 				
 				//Remove extra spaces and HTML tag from the course number
 				courseNum = (courseNum.replace(/\s+/g, ' ')).replace(/(<\/a>)/g, '');
-				course = courseNum + " " + classInfo.children[5];
+				course = courseNum + " " + classInfo.children[5].innerHTML;
 				//description = description +" with " + classInfo.children[6].innerHTML.split(" (")[0];
 
 				//console.log(description);
