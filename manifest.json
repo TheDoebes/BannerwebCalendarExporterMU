@@ -1,8 +1,8 @@
 {
-	"name": "Banner Web Calendar Exporter (WPI)",
+	"name": "Banner Web Calendar Exporter (MU)",
 	"description": "Generate an ICS for Google Cal, iCal, etc from BannerWeb",
-	"version": "1.1.0",
-	"author": "Paul Roberts based off of work by Evin Ugur. https://github.com/paul-roberts-vt/BannerwebCalendarExporterWPI",
+	"version": "1.2.0",
+	"author": "Cade Doebele based off of work by Paul Roberts and Evin Ugur. https://github.com/TheDoebes/BannerwebCalendarExporterMU",
   	"permissions": [
     	"tabs", "http://*.edu/*", "https://*.edu/*"
   	],
