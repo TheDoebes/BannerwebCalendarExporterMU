@@ -1,3 +1,8 @@
+# NOTICE
+Recent updates in google calendar have broken the time-of-day portion of this app. Attempting to import into iCal is successful, but sharing or exporting the events will also discard time-of-day. This persists into outlook.com and icloud.com. There is also now a section on the help pages for google calendar that requires imported .ics files to come from google calendar or outlook, and apple calendar files to be exported using the now-deprecated vCard format. 
+
+This bug kills the main time-saving features of the app, although I still found it worthwhile to use these events as a starting point. 
+
 # Bannerweb Calendar Exporter (MU)
 Allows bannerweb users to export the detailed schedule to a file that can be added iCal or Google Calendar. 
 
